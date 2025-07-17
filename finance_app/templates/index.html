@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard">
+    <h2>Resumen Financiero</h2>
+    <div class="summary">
+        <div class="summary-item">
+            <span>Balance:</span> 
+            <strong class="{% if balance >= 0 %}positive{% else %}negative{% endif %}">
+                ${{ "%.2f"|format(balance) }}
+            </strong>
+        </div>
+        <div class="summary-item">
+            <span>Total Ingresos:</span> 
+            <strong class="positive">${{ "%.2f"|format(income) }}</strong>
+        </div>
+        <div class="summary-item">
+            <span>Total Gastos:</span> 
+            <strong class="negative">${{ "%.2f"|format(expense) }}</strong>
+        </div>
+    </div>
+    
+    <div class="quick-actions">
+        <h3>Acciones Rápidas</h3>
+        <a href="{{ url_for('finances') }}" class="btn btn-primary">Agregar Transacción</a>
+        <a href="{{ url_for('chat') }}" class="btn btn-secondary">Consultar Asistente</a>
+    </div>
+</div>
+{% endblock %}
