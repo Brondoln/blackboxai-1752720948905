@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Asistente Inteligente{% endblock %}
+{% block content %}
+<div class="chat-container">
+    <h2>Asistente Financiero Inteligente</h2>
+    <p class="chat-description">
+        Chatea directamente con tu asistente financiero inteligente. Pregúntale sobre consejos financieros, análisis de gastos, presupuestos y cualquier duda sobre tus finanzas.
+    </p>
+    
+    <div class="webchat-container">
+        <iframe 
+            src="https://copilotstudio.microsoft.com/environments/Default-755ddf82-84f2-4ca0-94a1-817dacef68e9/bots/crba5_asistenteFinanciero/webchat?__version__=2" 
+            frameborder="0" 
+            class="webchat-iframe"
+            title="Asistente Financiero Inteligente">
+        </iframe>
+    </div>
+    
+    <div class="chat-tips">
+        <h4>Ejemplos de preguntas que puedes hacer:</h4>
+        <ul>
+            <li>¿Cómo puedo crear un presupuesto efectivo?</li>
+            <li>¿Qué porcentaje de mis ingresos debería ahorrar?</li>
+            <li>¿Cuáles son las mejores estrategias para reducir gastos?</li>
+            <li>¿Cómo puedo mejorar mi situación financiera?</li>
+            <li>¿Qué inversiones me recomiendas para principiantes?</li>
+            <li>¿Cómo puedo reducir mis deudas más rápido?</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
