@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Error del Servidor{% endblock %}
+{% block content %}
+<div class="error-page">
+    <h2>Error 500 - Error Interno del Servidor</h2>
+    <p>Lo sentimos, ha ocurrido un error interno. Por favor, inténtalo de nuevo más tarde.</p>
+    <div class="error-actions">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Volver al Dashboard</a>
+        <a href="{{ url_for('finances') }}" class="btn btn-secondary">Ir a Finanzas</a>
+    </div>
+</div>
+{% endblock %}
